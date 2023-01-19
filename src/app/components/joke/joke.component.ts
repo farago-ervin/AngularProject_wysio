@@ -16,7 +16,9 @@ export class JokeComponent implements OnInit {
   ngOnInit(): void {
     /*this.JokeService.getRandomJoke().subscribe((joke: Joke)=>{
       this.joke = joke
-    })*/
+    }
+    
+    )*/
     
     this.joke$ = this.jokeService.getRandomJoke()
   }
