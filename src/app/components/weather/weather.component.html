@@ -1,0 +1,10 @@
+<h1><img src="assets/weather.png" alt="weather" width="125px" height="125px">Weather:</h1>
+<label for="varosok">Válaszd ki a várost:</label>
+<input [(ngModel)]="currentCity"/>
+<button type="button" id="button1" (click) ="loadWeather()">OK</button>
+<div *ngIf="(weather$ | async) as weatherObj">
+    <p>Város: {{weatherObj.name}}</p>
+    <p>Hőmérséklet: {{weatherObj.main.temp}}</p>
+    <p>Páratartalom: {{weatherObj.main.humidity}}</p>
+</div>
+
